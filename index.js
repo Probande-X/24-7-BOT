@@ -1,5 +1,5 @@
 "use strict";
-const setupLeaveRejoin = require("./leaveRejoin.js");
+
 const { addLog, getLogs } = require("./logger");
 const mineflayer = require("mineflayer");
 const { Movements, pathfinder, goals } = require("mineflayer-pathfinder");
@@ -8,6 +8,7 @@ const config = require("./settings.json");
 const express = require("express");
 const http = require("http");
 const https = require("https");
+const setupLeaveRejoin = require("./leaveRejoin.js");  // ← leave/rejoin module
 
 // ============================================================
 // EXPRESS SERVER - Keep Render/Aternos alive
@@ -25,7 +26,7 @@ let botState = {
   errors: [],
   wasThrottled: false,
 };
-const setupLeaveRejoin = require("./leaveRejoin.js");
+
 // Health check endpoint for monitoring
 app.get('/', (req, res) => {
   res.send(`
@@ -1254,6 +1255,14 @@ function createBot() {
 
       initializeModules(bot, mcData, defaultMove);
 
+      // ========== START LEAVE/REJOIN MODULE ==========
+      if (config.modules && config.modules.leaveRejoin === true) {
+        setupLeaveRejoin(bot, createBot);
+        addLog("[LeaveRejoin] Activated – bot will leave and rejoin periodically");
+      }
+      // ========== END LEAVE/REJOIN MODULE ==========
+
+      // Attempt creative mode (only works if bot has OP and enabled in settings)
       setTimeout(() => {
         if (bot && botState.connected && config.server["try-creative"]) {
           bot.chat("/gamemode creative");
