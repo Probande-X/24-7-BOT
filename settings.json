@@ -55,7 +55,9 @@
     "avoidMobs": false,
     "combat": false,
     "beds": false,
-    "chat": true
+    "chat": true,
+    "leaveRejoin": true
+}
   },
   "discord": {
     "enabled": false,
