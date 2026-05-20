@@ -1,5 +1,5 @@
 function randomMs(minMs, maxMs) {
-    return Math.floor(Math.random() (maxMs - minMs + 1)) + minMs;
+    return Math.floor(Math.random() * (maxMs - minMs + 1)) + minMs;
 }
 
 function setupLeaveRejoin(bot, createBotCallback) {
@@ -60,7 +60,7 @@ function setupLeaveRejoin(bot, createBotCallback) {
         reconnectAttempts = 0;
         cleanup();
         stopped = false;
-        const stayTime = randomMs(60000, 300000); // 1-5 minutes
+        const stayTime = randomMs(60000, 300000);
         logThrottled(`[AFK] Will leave in ${Math.round(stayTime / 1000)} seconds`);
         scheduleNextJump();
         leaveTimer = setTimeout(() => {
