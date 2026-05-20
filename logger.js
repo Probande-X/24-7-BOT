@@ -4,7 +4,7 @@ function addLog(message) {
   const time = new Date().toLocaleTimeString();
   const formatted = `[${time}] ${message}`;
 
-  console.log(formatted); // still goes to Render logs
+  console.log(formatted);
 
   logs.push(formatted);
 
