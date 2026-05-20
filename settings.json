@@ -1,0 +1,89 @@
+{
+  "name": "AFK Bot",
+  "bot-account": {
+    "username": "Wendy",
+    "password": "",
+    "type": "offline"
+  },
+  "server": {
+    "ip": "KNIGHTSMP-r3vG.aternos.me",
+    "port": 30955,
+    "version": "1.21.1"
+  },
+  "position": {
+    "enabled": true,
+    "x": 0,
+    "y": 100,
+    "z": 0
+  },
+  "utils": {
+    "auto-auth": {
+      "enabled": true,
+      "password": "Perzuu"
+    },
+    "anti-afk": {
+      "enabled": true,
+      "sneak": true
+    },
+    "chat-messages": {
+      "enabled": true,
+      "repeat": true,
+      "repeat-delay": 500,
+      "messages": [
+        "Meow~ Wendy here! Need help with teleports, warps, or just a headpat?",
+        "I see you died again. I’ll keep your items safe next time, okay?",
+        "Someone left a chest open. Was it you? … I’m not mad, just disappointed.",
+        "Type /kit cat to get some fish. For me, not for you.",
+        "Afk? No problem, I’ll sit on your head until you’re back.",
+        "That’s a long fall. Want me to calculate the exact damage? Just kidding, I can’t math.",
+      ]
+    },
+    "chat-log": true,
+    "auto-reconnect": true,
+    "auto-reconnect-delay": 2000,
+    "max-reconnect-delay": 120000
+  },
+  "movement": {
+    "enabled": true,
+    "circle-walk": {
+      "enabled": true,
+      "radius": 4,
+      "speed": 3000
+    },
+    "look-around": {
+      "enabled": true,
+      "interval": 5000
+    },
+    "random-jump": {
+      "enabled": true,
+      "interval": 10000
+    }
+  },
+  "modules": {
+    "avoidMobs": true,
+    "combat": true,
+    "beds": false,
+    "chat": true,
+    "console-commands": true
+  },
+  "combat": {
+    "attack-mobs": true,
+    "auto-eat": true
+  },
+  "beds": {
+    "pick-up-day": false,
+    "place-night": false
+  },
+  "discord": {
+    "enabled": false,
+    "webhookUrl": "",
+    "events": {
+      "connect": true,
+      "disconnect": true,
+      "chat": false
+    }
+  },
+  "chat": {
+    "respond": true
+  }
+}
