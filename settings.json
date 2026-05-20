@@ -1,87 +1,83 @@
 {
-  "name": "AFK Bot",
+  "name": "Wendy",
+  "server": {
+    "ip": "KNIGHTSMP-r3vG.aternos.me",
+    "port": 30955,
+    "version": false,
+    "try-creative": true
+  },
   "bot-account": {
     "username": "Wendy",
     "password": "",
     "type": "offline"
   },
-  "server": {
-    "ip": "KNIGHTSMP-r3vG.aternos.me",
-    "port": 30955,
-    "version": "1.21.1"
-  },
-  "position": {
-    "enabled": true,
-    "x": 0,
-    "y": 100,
-    "z": 0
-  },
   "utils": {
+    "auto-reconnect": true,
+    "auto-reconnect-delay": 5000,
+    "max-reconnect-delay": 30000,
     "auto-auth": {
-      "enabled": true,
-      "password": "Perzuu"
+      "enabled": false,
+      "password": ""
     },
     "anti-afk": {
       "enabled": true,
-      "sneak": true
+      "sneak": false
     },
     "chat-messages": {
       "enabled": true,
       "repeat": true,
-      "repeat-delay": 500,
-      "messages": [
-        "Meow~ Wendy here! Need help with teleports, warps, or just a headpat?",
+      "repeat-delay": 300,
+      "messages": ["Meow~ Wendy here! Need help with teleports, warps, or just a headpat?",
         "I see you died again. I’ll keep your items safe next time, okay?",
         "Someone left a chest open. Was it you? … I’m not mad, just disappointed.",
         "Type /kit cat to get some fish. For me, not for you.",
         "Afk? No problem, I’ll sit on your head until you’re back.",
-        "That’s a long fall. Want me to calculate the exact damage? Just kidding, I can’t math.",
-      ]
-    },
-    "chat-log": true,
-    "auto-reconnect": true,
-    "auto-reconnect-delay": 2000,
-    "max-reconnect-delay": 120000
+        "That’s a long fall. Want me to calculate the exact damage? Just kidding, I can’t math."]
+    }
   },
   "movement": {
     "enabled": true,
     "circle-walk": {
-      "enabled": true,
-      "radius": 4,
-      "speed": 3000
-    },
-    "look-around": {
-      "enabled": true,
-      "interval": 5000
+      "enabled": false,
+      "radius": 5,
+      "speed": 5000
     },
     "random-jump": {
       "enabled": true,
       "interval": 10000
+    },
+    "look-around": {
+      "enabled": true,
+      "interval": 15000
     }
   },
   "modules": {
-    "avoidMobs": true,
-    "combat": true,
+    "avoidMobs": false,
+    "combat": false,
     "beds": false,
-    "chat": true,
-    "console-commands": true
-  },
-  "combat": {
-    "attack-mobs": true,
-    "auto-eat": true
-  },
-  "beds": {
-    "pick-up-day": false,
-    "place-night": false
+    "chat": true
   },
   "discord": {
     "enabled": false,
     "webhookUrl": "",
     "events": {
-      "connect": true,
-      "disconnect": true,
+      "connect": false,
+      "disconnect": false,
       "chat": false
     }
+  },
+  "position": {
+    "enabled": false,
+    "x": 0,
+    "y": 64,
+    "z": 0
+  },
+  "combat": {
+    "attack-mobs": false,
+    "auto-eat": false
+  },
+  "beds": {
+    "place-night": false
   },
   "chat": {
     "respond": true
