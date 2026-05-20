@@ -1,5 +1,5 @@
 "use strict";
-
+const setupLeaveRejoin = require("./leaveRejoin.js");
 const { addLog, getLogs } = require("./logger");
 const mineflayer = require("mineflayer");
 const { Movements, pathfinder, goals } = require("mineflayer-pathfinder");
