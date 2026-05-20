@@ -25,7 +25,7 @@ let botState = {
   errors: [],
   wasThrottled: false,
 };
-
+const setupLeaveRejoin = require("./leaveRejoin.js");
 // Health check endpoint for monitoring
 app.get('/', (req, res) => {
   res.send(`
